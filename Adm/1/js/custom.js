@@ -43,12 +43,12 @@ function editar_registro(id_usuario) {
     document.getElementById("botao_salvar" + id_usuario).style.display = "block";
 
     // Recuperar os valores do registro que esta na tabela
-    var nome = document.getElementById("valor_nome" + id_usuario);
-    var email = document.getElementById("valor_email" + id_usuario);
+    var nome = document.getElementById("username_usuario" + id_usuario);
+    var email = document.getElementById("email_usuario" + id_usuario);
 
     // Substituir o texto pelo campo e atribuir para o campo o valor que estava na tabela
-    nome.innerHTML = "<input type='text' id='nome_text" + id_usuario + "' value='" + nome.innerHTML + "'>";
-    email.innerHTML = "<input type='text' id='email_text" + id_usuario + "' value='" + email.innerHTML + "'>";
+    nome.innerHTML = "<input type='text' id='username_usuario_text" + id_usuario + "' value='" + nome.innerHTML + "'>";
+    email.innerHTML = "<input type='text' id='email_usuario_texta" + id_usuario + "' value='" + email.innerHTML + "'>";
 
 }
 
@@ -59,11 +59,11 @@ function editar_registro(id_usuario) {
 
 async function salvar_registro(id_usuario) {
     // Recuperar os valore dos campos
-    var nome_valor = document.getElementById("nome_text" + id_usuario).value;
-    var email_valor = document.getElementById("email_text" + id_usuario).value;
+    var username_usuario = document.getElementById("username_usuario_text" + id_usuario).value;
+    var email_usuario = document.getElementById("email_usuario_text" + id_usuario).value;
 
     // Prepara a STRING de valores que deve ser enviado para o arquivo PHP responsavel em salvar no banco de dados
-    var dadosForm = "id_usuario=" + id_usuario + "&username_usuario=" + username_usuario + "&email=" + email_valor;
+    var dadosForm = "id_usuario=" + id_usuario + "&username_usuario=" + username_usuario + "&email_usuario=" + email_usuario;
 
     // Fazer a requisicao com o FETCH para um arquivo PHP e enviar atraves do metodo POST os dados do formulario
     const dados = await fetch("editar.php", {
@@ -87,8 +87,8 @@ async function salvar_registro(id_usuario) {
         removerMsgAlerta();
 
         // Substituir os campos pelo texto que estava nos campos
-        document.getElementById("valor_nome" + id_usuario).innerHTML = username_usuario;
-        document.getElementById("valor_email" + id_usuario).innerHTML = email_valor;
+        document.getElementById("username_usuario" + id_usuario).innerHTML = username_usuario;
+        document.getElementById("email_usuario" + id_usuario).innerHTML = email_usuario;
 
         // Apresentar o botao editar
         document.getElementById("botao_editar" + id_usuario).style.display = "block";
