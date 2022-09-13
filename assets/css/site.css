@@ -69,6 +69,27 @@
     background: var(--green-medium);
 }
 
+.btn-blue {
+    background: var(--dark-blue);
+    color: white;
+}
+
+.btn-max {
+    padding: 20px;
+    font-size: 17px;
+}
+
+.btn-300-size {
+    width: 300px;
+}
+
+.text-area {
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    resize: vertical;
+    font-size: 17px;
+}
+
 /*------ Login ----------*/
 .container-login {
     background: var(--main-color);
@@ -320,12 +341,39 @@
     background: var(--background-main-color);
     margin-top: 60px;
     padding: 20px 60px;
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
+}
+
+.container-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-sections {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, auto);
+    
+}
+
+.container-center .section{
+    padding: 30px 100px;
 }
 
 .section {
     background: white;
     padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 3px 3px 8px .5px rgba(0, 0, 0, 0.082);
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding-bottom: 30px;
 }
 
 .form-group {
