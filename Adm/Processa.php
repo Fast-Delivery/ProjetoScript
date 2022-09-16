@@ -32,7 +32,7 @@
 				echo "<hr>";
 				
 				//Inserir o usuário no BD
-				$result_usuario = "INSERT INTO cheklist_db (Nome_checklist, Sistema_checklist, Procedimento_checklist, Sequencia_checklist) VALUES ('$Nome_checklist', '$Sistema_checklist', '$Procedimento_checklist', '$Sequencia_checklist')";
+				$result_usuario =  "INSERT INTO cheklist_db (Nome_checklist, Sistema_checklist, Procedimento_checklist, Sequencia_checklist, Img_Check) VALUES ('$Nome_checklist', '$Sistema_checklist', '$Procedimento_checklist', '$Sequencia_checklist','Aonet.png')";
 				$resultado_usuario = mysqli_query($conn, $result_usuario);
 			}
 			$primeira_linha = false;

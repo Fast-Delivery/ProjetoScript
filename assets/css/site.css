@@ -73,6 +73,10 @@
     background: var(--dark-blue);
     color: white;
 }
+.btn-blue {
+    background: var(--dark-blue);
+    color: white;
+}
 
 .btn-max {
     padding: 20px;
@@ -89,6 +93,7 @@
     resize: vertical;
     font-size: 17px;
 }
+
 
 /*------ Login ----------*/
 .container-login {
