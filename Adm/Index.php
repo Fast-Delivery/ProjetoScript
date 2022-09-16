@@ -108,16 +108,17 @@ $resultado_grupo_cheklist =  mysqli_query($conn,"SELECT * FROM grupo_cheklist");
 
 
             ?>
-            <div class="container-center">
+    <div class="container-home">
+            <div>
             <section class="section">
             <h1 class="section-title">Opções</h1>
-            <form method="GET" action="">
-		<input type="hidden" name="Sequencia_checklist"  value="1"> <br>   
-        <input type="hidden" name="result1"  value=""> <br>
-           
+            <form method="GET" action="" class="form">
+            <input type="hidden" name="Sequencia_checklist"  value="1"> <br>   
+            <input type="hidden" name="result1"  value=""> <br>
+            
 
-            <label for="Grupo">Grupo</label>
-                <select name="nome_grupo" id="nome_grupo" width="50">
+            <label for="Grupo" class="label-form" style="margin-bottom: 10px;">Grupo</label>
+                <select name="nome_grupo" id="nome_grupo" width="50" class="input-form" style="width: 100%;">
                 <?php
                 while($cheklist = mysqli_fetch_assoc($resultado_grupo_cheklist)){
                  ?>
@@ -129,10 +130,67 @@ $resultado_grupo_cheklist =  mysqli_query($conn,"SELECT * FROM grupo_cheklist");
                           });
                  </script>
 
-<input type="submit" class="btn btn-green btn-50-size" value="Começar">
+            <input type="submit" class="submit-form btn btn-green btn-50-size" value="Começar">
 
         </form>
+            </section>
+        <section class="section">
+        </section>
+        </div>
  </section>
+ <section class="section section-form">
+            <h1 class="section-title">Cadastro de usuário</h1>
+            <form action="" class="form">
+                <div class="form-group">
+                    <div>
+                        <label for="" class="label-form">Nome</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="" id="" class="input-form"
+                                placeholder="Insira seu nome de usuário">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="" class="label-form">Sobrenome</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="password" name="" id="" class="input-form" placeholder="Insira seu sobrenome">
+                        </div>
+                    </div>
+                </div>
+                <label for="" class="label-form">Email</label>
+                <div class="input-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="" id="" class="input-form" placeholder="Insira seu nome de usuário">
+                </div>
+                <div class="form-group">
+                    <div>
+                        <label for="" class="label-form">Senha</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="text" name="" id="" class="input-form"
+                                placeholder="Insira seu nome de usuário">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="" class="label-form">Confirmação de Senha</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="" id="" class="input-form" placeholder="Confirme sua senha">
+                        </div>
+                    </div>
+                </div>
+                <label for="" class="label-form">Nível de Acesso</label>
+                <div class="input-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <select name="" id="" class="input-form">
+                        <option value="">Administrador</option>
+                        <option value="">Usuário</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-form btn btn-green">Entrar</button>
+            </form>
+        </section>
 </div>
 <?php
 
@@ -233,8 +291,8 @@ $resultado_grupo_cheklist =  mysqli_query($conn,"SELECT * FROM grupo_cheklist");
         </script>
 
 </main>
-<script src="../assets/js/script.js"></script>
 <?php }  ?>
+<script src="../assets/js/script.js"></script>
 
 </body>
 

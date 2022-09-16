@@ -372,13 +372,19 @@
     border-radius: 10px;
     border: 1px solid var(--border-color);
     box-shadow: 3px 3px 8px .5px rgba(0, 0, 0, 0.082);
+    margin-bottom: 10px;
 }
 
 .section-title {
     text-align: center;
     font-weight: 400;
     letter-spacing: 2px;
-    padding-bottom: 30px;
+}
+
+.container-home {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 10px;
 }
 
 .form-group {
@@ -392,7 +398,7 @@
 }
 
 .form-group > div > .input-form {
-    width: 100%;
+    width: 100% !important;
 }
 
 /* ---------------------------- */
